@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">AdrianTech</h1>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h2>Graphic Design Services</h2>
+        <div class="service-container">
+            <a href="https://www.behance.net/" target="_blank" class="service-box">
+                <h3>Logos</h3>
+                <p>Professional logos for brands and businesses.</p>
+            </a>
+            <a href="https://www.canva.com/" target="_blank" class="service-box">
+                <h3>Posters & Flyers</h3>
+                <p>Marketing and promotional material design.</p>
+            </a>
+            <a href="https://www.vistaprint.com/" target="_blank" class="service-box">
+                <h3>Business Cards</h3>
+                <p>Creative, professional business card design.</p>
+            </a>
+        </div>
+        <a href="{{ url_for('home') }}" class="btn">Back to Home</a>
+    </section>
+
+</body>
+
+</html>

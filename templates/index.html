@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdrianTech Solution</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <h1 class="logo">AdrianTech</h1>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h2>AdrianTech Solution</h2>
+            <h3>I specialize in <span class="typing"></span></h3>
+
+            <a href="#contact" class="btn">Hire Me</a>
+
+        </div>
+
+    </section>
+
+    <section id="about" class="about">
+
+        <h2>About Me</h2>
+
+        <div class="about-container">
+
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='adrian.jpg') }}">
+            </div>
+
+            <div class="about-text">
+                <p>Hello, my name is <strong>Adrian Emmanuel</strong>.</p>
+
+                <p>I am the founder of <strong>AdrianTech Solution</strong>.
+                    I help businesses grow using programming, graphic design, digital marketing and animation.
+                    AdrianTech solution is a one-stop shop for all your digital needs. I am passionate about
+                    using technology to solve problems and create value for my clients. with over 3 years of
+                    experience in the industry, I have successfully completed over 30 projects for more than
+                    20 happy clients.
+
+                    i hope to give you the best service and help you business grow. Feel free to contact me
+                    for any inquiries or project requests.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="services" class="services">
+
+        <h2>My Services</h2>
+
+        <div class="service-container">
+
+            <a href="{{ url_for('programming') }}" class="service-box">
+                <h3>Programming</h3>
+                <p>Professional website development</p>
+            </a>
+
+            <a href="{{ url_for('graphic_design') }}" class="service-box">
+                <h3>Graphic Design</h3>
+                <p>Logos, posters and business cards</p>
+            </a>
+
+            <a href="{{ url_for('digital_marketing') }}" class="service-box">
+                <h3>Digital Marketing</h3>
+                <p>Marketing strategies for businesses</p>
+            </a>
+
+            <a href="{{ url_for('animation') }}" class="service-box">
+                <h3>Animation</h3>
+                <p>Creative animated video adverts</p>
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="counter-section">
+
+        <h2>My Achievements</h2>
+
+        <div class="counter-container">
+
+            <div class="counter-box">
+                <h3 class="counter" data-target="50">30</h3>
+                <p>Projects</p>
+            </div>
+
+            <div class="counter-box">
+                <h3 class="counter" data-target="30">20</h3>
+                <p>Happy Clients</p>
+            </div>
+
+            <div class="counter-box">
+                <h3 class="counter" data-target="3">3</h3>
+                <p>Years Experience</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="portfolio" class="portfolio">
+
+        <h2>My Work</h2>
+
+        <div class="portfolio-container">
+
+            <div class="portfolio-box">
+                <i class="fas fa-laptop-code portfolio-icon"></i>
+                <h4>Website Development</h4>
+            </div>
+
+            <div class="portfolio-box">
+                <i class="fas fa-paint-brush portfolio-icon"></i>
+                <h4>Graphic Design</h4>
+            </div>
+
+            <div class="portfolio-box">
+                <i class="fas fa-chart-line portfolio-icon"></i>
+                <h4>Digital Marketing</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Me</h2>
+
+        <form action="{{ url_for('contact') }}" method="POST">
+
+            <input type="text" name="user_name" placeholder="Your Name" required>
+
+            <input type="email" name="user_email" placeholder="Your Email" required>
+
+            <textarea name="message" placeholder="Message"></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+
+        </form>
+
+    </section>
+
+    <footer class="footer">
+
+        <h3>AdrianTech Solution</h3>
+
+        <p>Helping businesses grow with technology.</p>
+
+        <p><strong>Phone:</strong> +254 742103719</p>
+
+        <p><strong>Email:</strong> adrianemmanuel541@gmail.com</p>
+
+        <div class="footer-social">
+
+            <a href="https://wa.me/254742103719" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="mailto:adrianemmanuel541@@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 AdrianTech Solution
+        </p>
+
+    </footer>
+
+    <script>
+
+        function toggleMenu() {
+            document.getElementById("nav-links").classList.toggle("show");
+        }
+
+        var typed = new Typed(".typing", {
+            strings: ["Programming", "Graphic Design", "Digital Marketing", "Animation"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+
+    </script>
+
+</body>
+
+</html>

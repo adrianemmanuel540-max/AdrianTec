@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">AdrianTech</h1>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h2>Programming Services</h2>
+        <div class="service-container">
+            <a href="https://www.w3schools.com/" target="_blank" class="service-box">
+                <h3>Website Development</h3>
+                <p>Professional websites using HTML, CSS, JS, Flask, Django.</p>
+            </a>
+            <a href="https://www.python.org/" target="_blank" class="service-box">
+                <h3>Web Applications</h3>
+                <p>Custom web apps for business automation and efficiency.</p>
+            </a>
+            <a href="https://restfulapi.net/" target="_blank" class="service-box">
+                <h3>Backend APIs</h3>
+                <p>Secure REST APIs for mobile and web applications.</p>
+            </a>
+        </div>
+        <a href="{{ url_for('home') }}" class="btn">Back to Home</a>
+    </section>
+
+</body>
+
+</html>
